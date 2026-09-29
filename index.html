@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a3a64">
+  <meta name="description"
+    content="HydroStats: projeto acadêmico do IFFar São Borja que transforma dados de fluxo de água em informação para o consumo consciente.">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <title>HydroStats — Água em dados, consumo consciente</title>
+</head>
+
+<body class="home-page">
+  <header class="home-header">
+    <nav class="navbar navbar-expand-lg container py-3" aria-label="Navegação principal">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="HydroStats, início">
+        <img src="assets/logo/logo_sem_texto.png" alt="" height="40">
+        <span>Hydro<span>Stats</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#homeNav"
+        aria-controls="homeNav" aria-expanded="false" aria-label="Abrir menu"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="homeNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#como-funciona">Como funciona</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tecnologia">Tecnologia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#impacto">Impacto</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-hydro px-4" href="login.html">Acessar painel <i
+                class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="home-hero">
+      <div class="container py-5 py-lg-6">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <span class="eyebrow"><i class="bi bi-droplet-half" aria-hidden="true"></i> Tecnologia a serviço da
+              água</span>
+            <h1>Entenda o fluxo.<br><span>Transforme o consumo.</span></h1>
+            <p class="hero-copy">O HydroStats acompanha o fluxo de água e organiza as leituras em informações fáceis de
+              entender. Mais visibilidade para identificar hábitos e incentivar escolhas conscientes.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-light btn-lg px-4" href="login.html">Acessar o painel <i
+                  class="bi bi-arrow-up-right ms-2" aria-hidden="true"></i></a>
+              <a class="btn btn-outline-light btn-lg px-4" href="#como-funciona">Conhecer o projeto</a>
+            </div>
+            <div class="hero-note mt-4"><i class="bi bi-mortarboard me-2" aria-hidden="true"></i>Projeto acadêmico do
+              IFFar — Campus São Borja</div>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-brand-card">
+              <img src="assets/logo/logo_gota.png" alt="Identidade visual HydroStats: uma gota de água"
+                class="hero-drop" width="310" height="310">
+              <div class="hero-brand-caption"><span class="pulse-dot"></span><span>Da leitura do fluxo à
+                  informação</span></div>
+              <div class="hero-card-line" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="d-flex justify-content-between small text-white-50"><span><i
+                    class="bi bi-cpu me-1"></i>ESP8266 + sensor</span><span><i
+                    class="bi bi-cloud-arrow-up me-1"></i>MQTT</span><span><i class="bi bi-display me-1"></i>Painel
+                  web</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-wave" aria-hidden="true"></div>
+    </section>
+
+    <section class="home-section container py-5 py-lg-6" id="como-funciona">
+      <div class="section-heading text-center mx-auto mb-5">
+        <span class="section-kicker">Do fluxo ao conhecimento</span>
+        <h2>Uma visão mais clara do uso da água</h2>
+        <p>O sistema combina sensores e uma interface web para tornar as leituras úteis no dia a dia.</p>
+      </div>
+      <div class="row g-4 process-grid">
+        <div class="col-md-4">
+          <article class="process-card h-100"><span class="process-number">01</span>
+            <div class="process-icon"><i class="bi bi-moisture" aria-hidden="true"></i></div>
+            <h3>Mede o fluxo</h3>
+            <p>O sensor de vazão YF-S201 gera pulsos conforme a água passa pela tubulação. O ESP8266 interpreta esses
+              sinais e estima o fluxo.</p>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="process-card h-100"><span class="process-number">02</span>
+            <div class="process-icon"><i class="bi bi-broadcast" aria-hidden="true"></i></div>
+            <h3>Comunica os dados</h3>
+            <p>Conectado à rede, o ESP8266 publica as leituras via MQTT para que os dados possam chegar à aplicação de
+              monitoramento.</p>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="process-card h-100"><span class="process-number">03</span>
+            <div class="process-icon"><i class="bi bi-bar-chart-line" aria-hidden="true"></i></div>
+            <h3>Ajuda a interpretar</h3>
+            <p>O painel reúne fluxo, consumo por período, comparações, estado dos dispositivos e alertas em uma
+              interface acessível.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="technology-section py-5 py-lg-6" id="tecnologia">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5"><span class="section-kicker">Uma solução conectada</span>
+            <h2>O monitoramento acontece em duas frentes</h2>
+            <p class="text-secondary">Além dos dados digitais, o protótipo oferece sinais locais para facilitar a
+              leitura do sistema e chamar atenção para situações relevantes.</p><a href="login.html"
+              class="link-hydro">Explore o painel <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+          </div>
+          <div class="col-lg-7">
+            <div class="tech-list">
+              <article class="tech-item"><span class="tech-icon"><i class="bi bi-cpu" aria-hidden="true"></i></span>
+                <div>
+                  <h3>ESP8266 e YF-S201</h3>
+                  <p>Microcontrolador e sensor de fluxo formam a base para captar e processar as leituras de água.</p>
+                </div>
+              </article>
+              <article class="tech-item"><span class="tech-icon"><i class="bi bi-display" aria-hidden="true"></i></span>
+                <div>
+                  <h3>LCD 16×2</h3>
+                  <p>Exibe informações essenciais diretamente no protótipo, sem depender do acesso ao painel.</p>
+                </div>
+              </article>
+              <article class="tech-item"><span class="tech-icon"><i class="bi bi-lightbulb"
+                    aria-hidden="true"></i></span>
+                <div>
+                  <h3>LEDs e buzzer</h3>
+                  <p>Indicadores visuais e sonoros podem sinalizar estados e alertas definidos para o sistema.</p>
+                </div>
+              </article>
+              <article class="tech-item"><span class="tech-icon"><i class="bi bi-wifi" aria-hidden="true"></i></span>
+                <div>
+                  <h3>MQTT e dashboard</h3>
+                  <p>Mensagens publicadas pelo dispositivo alimentam uma experiência web com leituras, histórico e
+                    acompanhamento.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section container py-5 py-lg-6" id="impacto">
+      <div class="impact-card row g-0 align-items-stretch overflow-hidden">
+        <div class="col-lg-7 p-4 p-lg-5"><span class="section-kicker">Tecnologia com propósito</span>
+          <h2>Informação que incentiva cuidado</h2>
+          <p>Conhecer o próprio consumo é um passo importante para perceber padrões, conversar sobre desperdício e
+            apoiar decisões mais responsáveis. O HydroStats aproxima instrumentação e conscientização em um projeto
+            educacional.</p>
+          <div class="impact-tags"><span><i class="bi bi-droplet me-1"></i>Uso consciente</span><span><i
+                class="bi bi-graph-up-arrow me-1"></i>Dados compreensíveis</span><span><i
+                class="bi bi-book me-1"></i>Aprendizagem aplicada</span></div>
+        </div>
+        <div class="col-lg-5 impact-goal">
+          <div class="goal-icon"><i class="bi bi-globe-americas" aria-hidden="true"></i></div>
+          <div class="goal-label">Conexão com os Objetivos de Desenvolvimento Sustentável</div>
+          <div class="goal-number">ODS 6.a</div>
+          <p>O projeto aproxima tecnologia e aprendizagem aplicada para incentivar a eficiência no uso da água, em
+            diálogo com o ODS 6 e sua meta 6.a.</p><a href="https://brasil.un.org/pt-br/sdgs/6" target="_blank"
+            rel="noopener noreferrer" class="goal-link">Conheça o ODS 6 <i class="bi bi-box-arrow-up-right ms-1"
+              aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section py-5">
+      <div class="container text-center"><span class="section-kicker">Acompanhe de perto</span>
+        <h2>Veja os dados reunidos em um só lugar</h2>
+        <p>Acesse o painel para visualizar indicadores, histórico de consumo e estado dos dispositivos.</p><a
+          class="btn btn-hydro btn-lg px-4" href="login.html">Entrar no HydroStats <i class="bi bi-arrow-right ms-2"
+            aria-hidden="true"></i></a>
+      </div>
+    </section>
+  </main>
+  <footer class="home-footer">
+    <div class="container py-4 d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"><a
+        class="footer-brand" href="index.html"><img src="assets/logo/logo_sem_texto.png" alt=""
+          height="30">HydroStats</a>
+      <p class="mb-0">Projeto acadêmico desenvolvido no IFFar — Campus São Borja.</p><a href="#top" class="back-top"
+        aria-label="Voltar ao início" onclick="window.scrollTo({top:0,behavior:'smooth'});return false"><i
+          class="bi bi-arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
